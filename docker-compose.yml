@@ -8,6 +8,9 @@ services:
     image: 'redis:latest'
   # Se crea el servicio api
   api:
+    # Se le dice que depende del service postgre
+    depends_on:
+      - postgres
     # Se define como crear la imagen
     build:
       # Nombre del dockerfile, no se indica el path
